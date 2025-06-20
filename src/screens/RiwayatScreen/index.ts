@@ -1,0 +1,1 @@
+export { RiwayatScreen } from './RiwayatScreen'
