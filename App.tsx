@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { HomeStackParamList } from "./src/screens/types";
 import { HomeScreen, ResultScreen, TestScreen, RiwayatScreen } from "./src/screens";
+import { IntroScreen } from "./src/screens/IntroScreen/IntroScreen";
 
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 
@@ -25,6 +26,7 @@ export default function App() {
         />
         <Stack.Screen name="Result" component={ResultScreen} />
         <Stack.Screen name="Riwayat" component={RiwayatScreen} />
+        <Stack.Screen name="Intro" component={IntroScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

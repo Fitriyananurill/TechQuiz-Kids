@@ -17,10 +17,11 @@ export function Question({ question, onAnswered }: Props) {
           <View style={[questionStyle.aspectRatio]}>
             <Image
               style={questionStyle.image}
-              source={{
-                uri: question.image?.uri,
-              }}
-              alt={question.image?.alt}
+              source={
+                typeof question.image === "number"
+                  ? question.image // ✅ require('./computer.jpg')
+                  : { uri: question.image?.uri } // ✅ { uri: 'https://...' }
+              }
             />
           </View>
         ) : null}
@@ -43,8 +44,9 @@ const questionStyle = StyleSheet.create({
     aspectRatio: 2 / 1,
   },
   image: {
-    flex: 1,
-    resizeMode: "cover",
+    width: '100%',
+    height: '100%',
+    resizeMode: "contain",
     borderRadius: 12,
     borderColor: "#e5e7eb",
     borderWidth: 1,

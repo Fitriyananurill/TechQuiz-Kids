@@ -1,4 +1,5 @@
 import { Question, Test } from "./types";
+import { Image } from "react-native";
 
 export const SolarSystemTest: Test = {
   id: "id:test/solar-system",
@@ -7,19 +8,16 @@ export const SolarSystemTest: Test = {
   numOfQuestions: 10,
   duration: 10,
   image: {
-    uri: "https://plus.unsplash.com/premium_vector-1736987886169-e0f55027adff?q=80&w=1208&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Solar System",
-  },
+    uri: Image.resolveAssetSource(require('./keyboard.png')).uri,
+    alt: "Gambar komputer",
+    },
 };
 
 export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/10",
     question: "Tombol mana yang digunakan untuk mengetik huruf kapital?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/40", text: "Caps Lock", isCorrect: true },
       { id: "id:option/41", text: "Spacebar", isCorrect: false },
@@ -33,10 +31,7 @@ export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/11",
     question: "Apa nama tombol panjang di bagian bawah keyboard?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/44", text: "Shift", isCorrect: false },
       { id: "id:option/45", text: "Tab", isCorrect: false },
@@ -49,10 +44,7 @@ export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/12",
     question: "Tombol mana yang dipakai untuk menghapus huruf?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/48", text: "Tab", isCorrect: false },
       { id: "id:option/49", text: "Backspace", isCorrect: true },
@@ -66,10 +58,7 @@ export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/13",
     question: "Apa nama tombol untuk pindah ke baris baru saat mengetik?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/52", text: "Esc", isCorrect: false },
       { id: "id:option/53", text: "Spacebar", isCorrect: false },
@@ -84,10 +73,7 @@ export const solarSystemQuestions: Question[] = [
     id: "id:question/14",
     question:
       "Simbol mana yang ada di tombol angka 2?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/56", text: "%", isCorrect: false },
       { id: "id:option/57", text: "#", isCorrect: false },
@@ -102,10 +88,7 @@ export const solarSystemQuestions: Question[] = [
     id: "id:question/15",
     question:
       "Huruf mana yang ada di sebelah kanan tombol \"A\"?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/60", text: "S", isCorrect: true },
       { id: "id:option/61", text: "D", isCorrect: false },
@@ -119,10 +102,7 @@ export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/16",
     question: "Simbol apa yang sering ada di tombol angka 1?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/64", text: "@", isCorrect: false },
       { id: "id:option/65", text: "!", isCorrect: true },
@@ -137,10 +117,7 @@ export const solarSystemQuestions: Question[] = [
     id: "id:question/17",
     question:
       "Tombol mana yang digunakan untuk memberi spasi?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/68", text: "Tab", isCorrect: false },
       { id: "id:option/69", text: "Spacebar", isCorrect: true },
@@ -154,10 +131,7 @@ export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/18",
     question: "Tombol mana yang digunakan untuk keluar dari suatu menu atau aplikasi?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/72", text: "Tab", isCorrect: false },
       { id: "id:option/73", text: "Esc", isCorrect: true },
@@ -170,10 +144,7 @@ export const solarSystemQuestions: Question[] = [
   {
     id: "id:question/19",
     question: "Apa fungsi tombol \"Caps Lock\" di keyboard?",
-    image: {
-      uri: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Germany",
-    },
+    image: require('./computer.jpg'),
     options: [
       { id: "id:option/72", text: "Membuat semua huruf kecil", isCorrect: false },
       { id: "id:option/73", text: "Membuat semua huruf besar", isCorrect: true },

@@ -1,16 +1,13 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { TestName } from "../data/types";
 
-export type BottomTabParamList = {
-  HomeTab: undefined;
-  SavedTab: undefined;
-  StatsTab: undefined;
-  SettingsTab: undefined;
-};
-
 export type HomeStackParamList = {
   Home: undefined;
   Test: {
+    title: string;
+    testName: TestName;
+  };
+  Intro: {
     title: string;
     testName: TestName;
   };
@@ -20,7 +17,7 @@ export type HomeStackParamList = {
     totalQuestions: number;
     timeTaken: number;
   };
-  Riwayat:undefined
+  Riwayat: undefined;
 };
 
 export type HomeScreenProps = NativeStackScreenProps<
@@ -39,4 +36,7 @@ export type RiwayatScreenProps = NativeStackScreenProps<
   HomeStackParamList,
   "Riwayat"
 >;
-
+export type IntroScreenProps = NativeStackScreenProps<
+  HomeStackParamList,
+  "Intro"
+>;

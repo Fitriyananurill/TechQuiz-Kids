@@ -21,7 +21,7 @@ export interface Question {
 export interface Test {
   id: string;
   title: string;
-  image?: Image;
+  image?: any;
   testName: TestName;
   numOfQuestions: number;
   duration: number;

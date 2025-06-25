@@ -26,7 +26,6 @@ export function TestScreen({ navigation, route }: TestScreenProps) {
   const [incorrectIndexes, setIncorrectIndexes] = useState<number[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-  // Only run on intial render to load the questions
   useEffect(() => {
     const questions = (() => {
       switch (category) {
@@ -40,7 +39,6 @@ export function TestScreen({ navigation, route }: TestScreenProps) {
     console.log("useEffect: load questions");
   }, [category]);
 
-  // Effect run to update the header
   useEffect(() => {
     if (questions.length > 0) {
       navigation.setOptions({
@@ -68,14 +66,13 @@ export function TestScreen({ navigation, route }: TestScreenProps) {
     pagerViewRef,
   ]);
 
-  // Effect run to determine if the user has answered all questions
   useEffect(() => {
     if (
       questions.length > 0 &&
       questions.length === correctIndexes.length + incorrectIndexes.length
     ) {
       navigation.push("Result", {
-        testName: category, // ✅ Kirim juga nama kategori/modul kuis
+        testName: category, 
         correctAnswers: correctIndexes.length,
         totalQuestions: questions.length,
         timeTaken: Date.now() - startTimeRef.current,
@@ -150,8 +147,7 @@ const MemoizedPagerView = memo(
       </PagerView>
     );
   },
-  // We don't compare functions because they are recreated on every render (this would make them unequal all the time)
-  // We could use useCallback but I believe this is better
+
   (prevProps, curProps) =>
     prevProps.questions.length === curProps.questions.length &&
     prevProps.pagerViewRef === curProps.pagerViewRef

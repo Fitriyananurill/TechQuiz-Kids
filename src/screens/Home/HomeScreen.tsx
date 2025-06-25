@@ -9,23 +9,22 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
     <SafeAreaBox>
       {/* Background Image */}
       <Image
-        source={require('./assets/homescreen.jpg')} // ← path lokal
+        source={require('./assets/homescreen.jpg')}
         style={homeScreen.backgroundImage}
         resizeMode="cover"
       />
-
       
       {/* Navigation Icons */}
       <View style={homeScreen.navigationContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("Home")}>
           <Image 
-            source={require('./assets/home-icon.png')} // Ganti dengan path gambar lokal Anda
+            source={require('./assets/home-icon.png')} 
             style={homeScreen.icon}
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate("Riwayat")}>
           <Image 
-            source={require('./assets/history-icon.png')} // Ganti dengan path gambar lokal Anda
+            source={require('./assets/history-icon.png')}
             style={homeScreen.icon}
           />
         </TouchableOpacity>
@@ -49,7 +48,7 @@ export function HomeScreen({ navigation }: HomeScreenProps) {
                 duration={item.duration}
                 index={index}
                 onPress={() => {
-                  navigation.navigate("Test", {
+                  navigation.navigate("Intro", {
                     title: item.title,
                     testName: item.testName,
                   });
@@ -79,7 +78,7 @@ const homeScreen = StyleSheet.create({
   rootContainer: {
     padding: 16,
     gap: 8,
-    marginTop: 50, // Memberi ruang untuk navigation icons
+    marginTop: 50, 
   },
   title: {
     fontSize: 20,
